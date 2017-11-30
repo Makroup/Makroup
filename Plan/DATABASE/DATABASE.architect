@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>DATABASE</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Makroup" />
+   <property key="Connection Type" value="MySQL" />
+   <property key="JDBC URL" value="jdbc:mysql://192.185.208.25:3306/tigge627_makroupDBPlatform" />
+   <property key="UID" value="tigge627_root" />
+   <property key="PWD" value="Rayquaza230497" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+  <data-source id="DS0">
+   <property key="Connection Type" value="MySQL" />
+   <property key="Logical" value="Makroup" />
+   <property key="JDBC URL" value="jdbc:mysql://192.185.208.25:3306/tigge627_makroupDBPlatform" />
+   <property key="UID" value="tigge627_root" />
+   <property key="PWD" value="Rayquaza230497" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="aeafc3f2-e66b-4bc2-898e-a2b3592c4391" dbcs-ref="DS0" name="Makroup" physicalName="Makroup" >
+   <catalog id="CAT1" populated="false" UUID="d31453d5-76db-4495-891f-06a6fdcd60ea" name="information_schema" nativeTerm="database" physicalName="information_schema" >
+   </catalog>
+   <catalog id="CAT2" populated="false" UUID="f0423357-b79d-45cf-900c-8a77fe18a45a" name="tigge627_makroupDBPlatform" nativeTerm="database" physicalName="tigge627_makroupDBPlatform" >
+   </catalog>
+   <relationships>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB4" populated="true" UUID="2bff403e-deb2-431e-8948-46e503047b86" name="User" objectType="TABLE" physicalName="user" >
+   <remarks>Tabela Responsável por armazenar os dados dos usuários do sistema.
+</remarks>
+   <folder id="FOLTAB41" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL5" populated="true" UUID="e80332bc-63b3-450c-bbb2-4eb40fd4a9ef" autoIncrement="true" autoIncrementSequenceName="user_user_id_pk_seq" defaultValue="" name="User Id" nullable="0" physicalName="user_id_pk" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
+     <remarks>Chave primária única de cada usuário.
+</remarks>
+    </column>
+    <column id="COL6" populated="true" UUID="83b6d016-586c-4e5d-ab1b-f76ab3edd5fb" autoIncrement="false" autoIncrementSequenceName="user_user_username_seq" defaultValue="" name="User Username" nullable="0" physicalName="user_username" precision="20" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Referente ao nome de usuário único.</remarks>
+    </column>
+    <column id="COL7" populated="true" UUID="d365392d-2663-4938-8b5f-0c62ea4f7c1e" autoIncrement="false" autoIncrementSequenceName="user_user_email_seq" defaultValue="" name="User Email" nullable="0" physicalName="user_email" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Referente ao email de um usuário.
+</remarks>
+    </column>
+    <column id="COL8" populated="true" UUID="30ac3ed7-fee7-4532-b556-80b22b4e3aeb" autoIncrement="false" autoIncrementSequenceName="user_user_password_seq" defaultValue="" name="User Password" nullable="0" physicalName="user_password" precision="60" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Referente a senha de um determinado usuário.</remarks>
+    </column>
+    <column id="COL9" populated="true" UUID="05732cf5-a2ff-4099-a7b2-9c67537dc6f7" autoIncrement="false" autoIncrementSequenceName="user_user_entry_date_seq" defaultValue="" name="User Entry Date" nullable="0" physicalName="user_entry_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Referente à data de criação da conta.
+</remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="d1b87143-3c2e-4326-8c57-a3e0c9ec904b" autoIncrement="false" autoIncrementSequenceName="user_user_last_acess_seq" defaultValue="" name="User Last Access" nullable="0" physicalName="user_last_acess" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Referente a data e hora do último acesso de um usuário.</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB43" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB42" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB44" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX11" populated="true" UUID="e749161f-b771-40d4-a73a-8dfe0afb5475" clustered="false" name="user_id_pk" physicalName="user_id_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC12" populated="true" UUID="d46abfa5-1179-45f8-8c05-1a5041895877" ascendingOrDescending="UNSPECIFIED" column-ref="COL5" name="User Id" physicalName="user_id_pk" />
+    </index>
+    <index id="IDX13" populated="true" UUID="22c9f970-bf58-4e0c-8d58-4e8efd704dc3" clustered="false" name="User_Username" physicalName="user_username" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC14" populated="true" UUID="eae569cf-ad85-4f98-bdd4-560f6ec1af8b" ascendingOrDescending="UNSPECIFIED" column-ref="COL6" name="User Username" physicalName="user_username" />
+    </index>
+    <index id="IDX15" populated="true" UUID="103e140d-9047-4f96-a502-da5a21fe4afd" clustered="true" name="User_Email_Password" physicalName="user_email_password" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC16" populated="true" UUID="346cea65-7648-486c-834a-be3ead055f13" ascendingOrDescending="UNSPECIFIED" column-ref="COL7" name="User Email" physicalName="user_email" />
+     <index-column id="IDC17" populated="true" UUID="44177fff-0236-4c9e-944f-2c042714decb" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="User Password" physicalName="user_password" />
+    </index>
+    <index id="IDX18" populated="true" UUID="5cf2c8c3-1de5-49c4-84d3-f6a0a870c97e" clustered="false" name="User_UserName_Password" physicalName="user_username_password" primaryKeyIndex="false" unique="false" >
+     <index-column id="IDC19" populated="true" UUID="c7633e19-5c78-4d9b-877b-ad6fa6160645" ascendingOrDescending="UNSPECIFIED" column-ref="COL6" name="User Username" physicalName="user_username" />
+     <index-column id="IDC20" populated="true" UUID="a87d0fdc-8cc5-4903-82b1-9d2731211db0" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="User Password" physicalName="user_password" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="0.8408964152537145" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB4" x="237" y="10" bgColor="0xb9bbf6" fgColor="0x000000" rounded="false" dashed="false"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
