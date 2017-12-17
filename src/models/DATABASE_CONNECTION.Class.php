@@ -16,7 +16,6 @@ abstract class DATABASE_CONNECTION
     private static $DB_PASS;
 
     //Construtor que realizará a conexão com o banco de dados.
-    
     public function __construct () {
 
         $this->PDOParameters ();
@@ -25,11 +24,7 @@ abstract class DATABASE_CONNECTION
     }
     
     
-    //Método Que pegára os dados do construtor e realizará a Conexão. 
-
-    /**
-     *
-     */
+    //Método Que pegára os dados do construtor e realizará a Conexão.
     private  function PDOCaller () {
 
         if(!self::$DB_CONNECTION){
