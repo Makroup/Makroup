@@ -9,7 +9,8 @@
 *
 */
 
-    class DATABASE_INSERT extends DATABASE_TOOLS{
+    class DATABASE_INSERT extends DATABASE_TOOLS
+    {
 
     	/*
    	 	* Os atributos da classe DATABASE_INSERT
@@ -26,7 +27,14 @@
 
     	private function generateQuery ($tableNames, $tableTerms, $valueTerms){
 
-    		return 'INSERT INTO '.self::generateTerms($tableNames)." (".self::generateTerms($tableTerms).") VALUES".self::generateValuesString($valueTerms);
+    		return
+                'INSERT INTO '
+                .self::generateTerms($tableNames)
+                ." ("
+                .self::generateTerms($tableTerms)
+                .") VALUES"
+                .self::generateValuesString($valueTerms);
+
     	}
 
     	//Função que gera os valores a serem inseridos. Podendo ser de um a indefinido.
@@ -83,7 +91,10 @@
 
     	public function prepare($tableNames, $tableTerms, $valueTerms){
 
-            return self::initPrepare(self::generateQuery($tableNames, $tableTerms, $valueTerms));
+            return
+                self::initPrepare(
+                    self::generateQuery($tableNames, $tableTerms, $valueTerms)
+                );
 
     	}
 
@@ -91,7 +102,8 @@
 
     	public function execute($valueTerms){
 
-            return self::runPrepare($valueTerms);
+            return
+                self::runPrepare($valueTerms);
 
     	}
 

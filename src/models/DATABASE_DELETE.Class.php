@@ -7,7 +7,8 @@
 *
 */
 
-class DATABASE_DELETE extends DATABASE_TOOLS{
+class DATABASE_DELETE extends DATABASE_TOOLS
+{
 	/*
     * Os atributos da classe DATABASE_DELETE
     * O atributo "tableNames" faz referência as tabelas que serão alvos da remoção.
@@ -36,11 +37,14 @@ class DATABASE_DELETE extends DATABASE_TOOLS{
 
         if (!$this->isConditionEmptyOrInvalid ($conditionTerms)){
 
-            return self::runQuery(self::generateQuery($tableNames, $conditionTerms));
+            return
+                self::runQuery(
+                    self::generateQuery($tableNames, $conditionTerms)
+                );
 
         }
 
-        return FALSE;   
+        return false;
     }
 
     /*
@@ -54,11 +58,14 @@ class DATABASE_DELETE extends DATABASE_TOOLS{
 
         if (!$this->isConditionEmptyOrInvalid ($conditionTerms)){
 
-            return self::initPrepare(self::generateQuery($tableNames, $conditionTerms));
+            return
+                self::initPrepare(
+                    self::generateQuery($tableNames, $conditionTerms)
+                );
 
         }
 
-        return FALSE;   
+        return false;
     }
 
 
@@ -68,11 +75,12 @@ class DATABASE_DELETE extends DATABASE_TOOLS{
 
         if (!$this->isConditionEmptyOrInvalid($conditionTerms)){
 
-            return self::runPrepare($conditionTerms);
+            return
+                self::runPrepare($conditionTerms);
 
         }   
 
-        return FALSE;
+        return false;
     }
 
 }    

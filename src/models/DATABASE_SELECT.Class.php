@@ -6,7 +6,8 @@
 * Esta classe é filha da classe DATABASE_TOOLS
 */
 
-class DATABASE_SELECT extends DATABASE_TOOLS{
+class DATABASE_SELECT extends DATABASE_TOOLS
+{
 
     /*
     * Os atributos da classe DATABASE_SELECT
@@ -91,7 +92,10 @@ class DATABASE_SELECT extends DATABASE_TOOLS{
 
     public function execute($conditionValues = array(), $orderValues = array(), $limitValues = array()){
 
-    	return self::runPrepare(array_merge($conditionValues,$orderValues,$limitValues));
+    	return
+            self::runPrepare(
+                array_merge($conditionValues,$orderValues,$limitValues)
+            );
 
     }
 

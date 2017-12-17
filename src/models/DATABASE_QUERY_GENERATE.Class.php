@@ -7,7 +7,8 @@
 *
 */
 
-abstract class DATABASE_QUERY_GENERATE extends DATABASE_RUN{
+abstract class DATABASE_QUERY_GENERATE extends DATABASE_RUN
+{
 
 	/*
 	* Os métodos desta primeira parte são direcionados a classe query();

@@ -26,7 +26,8 @@ abstract class DATABASE_TOOLS extends DATABASE_QUERY_GENERATE
     */
     public function getLastInsertId ($sequenceName = null) {
 
-        return self::$DB_CONNECTION->lastInsertId($sequenceName);
+        return
+            self::$DB_CONNECTION->lastInsertId($sequenceName);
 
     }
 
@@ -56,7 +57,8 @@ abstract class DATABASE_TOOLS extends DATABASE_QUERY_GENERATE
 
     public function verifIfExistsOneOrMoreElements ($queryResult) {
 
-        return self::getNumOfElements($queryResult) > 0;
+        return
+            self::getNumOfElements($queryResult) > 0;
 
     }
 

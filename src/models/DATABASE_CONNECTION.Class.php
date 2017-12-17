@@ -26,17 +26,24 @@ abstract class DATABASE_CONNECTION
     
     
     //Método Que pegára os dados do construtor e realizará a Conexão. 
+
+    /**
+     *
+     */
     private  function PDOCaller () {
 
         if(!self::$DB_CONNECTION){
 
              try{
 
-                 self::$DB_CONNECTION = new PDO (self::$DB_PARAMETERS, self::$DB_USER, self::$DB_PASS);
+                 self::$DB_CONNECTION =
+                     new PDO (self::$DB_PARAMETERS, self::$DB_USER, self::$DB_PASS);
 
             } catch (PDOException $e) {
 
-                echo "Houve uma falha na conexão com o banco de dados: ".$e->getMessage();
+                echo
+                    "Houve uma falha na conexão com o banco de dados: "
+                    .$e->getMessage();
 
             } 
 

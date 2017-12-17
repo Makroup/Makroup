@@ -20,7 +20,8 @@ abstract class DATABASE_RUN extends DATABASE_CONNECTION
 
 	protected function runQuery ($queryString) {
 
-		return self::$DB_CONNECTION->query($queryString);
+		return
+            self::$DB_CONNECTION->query($queryString);
 
 	}
 
