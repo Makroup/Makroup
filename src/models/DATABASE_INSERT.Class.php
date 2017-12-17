@@ -31,9 +31,8 @@
                 'INSERT INTO '
                 .self::generateTerms($tableNames)
                 ." ("
-                .self::generateTerms($tableTerms)
-                .") VALUES"
-                .self::generateValuesString($valueTerms);
+                .self::generateTerms($tableTerms) .
+                ") VALUES" .self::generateValuesString($valueTerms);
 
     	}
 
